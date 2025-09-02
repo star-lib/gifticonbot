@@ -1,0 +1,47 @@
+name: Build Windows
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch: # 수동 실행 가능
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.9.0'
+        channel: 'stable'
+    
+    - name: Enable Windows desktop
+      run: flutter config --enable-windows-desktop
+    
+    - name: Get dependencies
+      run: flutter pub get
+    
+    - name: Build Windows app
+      run: flutter build windows --release
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: windows-build
+        path: build/windows/runner/Release/
+    
+    - name: Create portable package
+      run: |
+        cd build/windows/runner/Release
+        Compress-Archive -Path * -DestinationPath ../../../GifticonSender_Portable.zip -Force
+    
+    - name: Upload portable package
+      uses: actions/upload-artifact@v3
+      with:
+        name: portable-package
+        path: GifticonSender_Portable.zip

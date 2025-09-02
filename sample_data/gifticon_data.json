@@ -1,0 +1,47 @@
+[
+  {
+    "username": "홍길동",
+    "gifticonType": "스타벅스",
+    "gifticonName": "아메리카노",
+    "gifticonValue": "5000원",
+    "gifticonExpiry": "2024-12-31",
+    "gifticonCode": "ABC123",
+    "message": "축하합니다!"
+  },
+  {
+    "username": "김철수",
+    "gifticonType": "맥도날드",
+    "gifticonName": "빅맥세트",
+    "gifticonValue": "8000원",
+    "gifticonExpiry": "2024-12-31",
+    "gifticonCode": "DEF456",
+    "message": "이벤트 당첨!"
+  },
+  {
+    "username": "이영희",
+    "gifticonType": "쿠팡",
+    "gifticonName": "상품권",
+    "gifticonValue": "10000원",
+    "gifticonExpiry": "2024-12-31",
+    "gifticonCode": "GHI789",
+    "message": "감사합니다"
+  },
+  {
+    "username": "박민수",
+    "gifticonType": "스타벅스",
+    "gifticonName": "카페라떼",
+    "gifticonValue": "5500원",
+    "gifticonExpiry": "2024-12-31",
+    "gifticonCode": "JKL012",
+    "message": "행운을 빕니다"
+  },
+  {
+    "username": "최지영",
+    "gifticonType": "맥도날드",
+    "gifticonName": "치킨버거세트",
+    "gifticonValue": "7500원",
+    "gifticonExpiry": "2024-12-31",
+    "gifticonCode": "MNO345",
+    "message": "즐거운 하루 되세요"
+  }
+]
